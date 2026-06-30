@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MOLECULINK Learning Ecosystem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Orbitron:wght@700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="brand" type="button" data-route="landing" aria-label="Go to MOLECULINK landing page">
+      <span class="molecule-logo logo-small" aria-hidden="true">
+        <svg viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="12"></circle>
+          <circle cx="50" cy="25" r="7"></circle>
+          <circle cx="75" cy="60" r="7"></circle>
+          <circle cx="25" cy="60" r="7"></circle>
+        </svg>
+      </span>
+      <span>
+        <strong>MOLECULINK</strong>
+        <small>Learning Ecosystem</small>
+      </span>
+    </button>
+  </header>
+
+  <main>
+    <section id="route-landing" class="route active">
+      <div class="login-gateway">
+        <div class="ecosystem-title">
+          <div class="landing-brand-lockup">
+            <span class="molecule-logo logo-large" aria-hidden="true">
+              <svg viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="12"></circle>
+                <circle cx="50" cy="25" r="7"></circle>
+                <circle cx="75" cy="60" r="7"></circle>
+                <circle cx="25" cy="60" r="7"></circle>
+              </svg>
+            </span>
+            <div>
+              <p class="eyebrow">MOLECULINK Learning Ecosystem</p>
+              <h1>Where the Invisible Explains the Observable</h1>
+              <p class="gateway-subheading">A unified learning, teaching, and pilot-testing platform for chemistry investigations.</p>
+            </div>
+          </div>
+        </div>
+        <div class="portal-grid three-portals landing-portals">
+          <article class="portal-card portal-entry">
+            <i data-lucide="flask-conical"></i>
+            <h2>Student Portal</h2>
+            <p>Missions, toolkit, badges, and certificate.</p>
+            <button class="primary" type="button" data-route="student-login"><i data-lucide="log-in"></i> Log In</button>
+          </article>
+          <article class="portal-card portal-entry">
+            <i data-lucide="book-open-check"></i>
+            <h2>Teacher Companion Portal</h2>
+            <p>Mission guide, assessments, and learner support.</p>
+            <button class="primary" type="button" data-route="teacher-login"><i data-lucide="log-in"></i> Log In</button>
+          </article>
+          <article class="portal-card portal-entry">
+            <i data-lucide="settings"></i>
+            <h2>Administrator Portal</h2>
+            <p>Accounts, research dashboard, exports, and certificates.</p>
+            <button class="primary" type="button" data-route="admin-login"><i data-lucide="log-in"></i> Log In</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="route-student-login" class="route">
+      <div class="login-panel">
+        <div class="page-head">
+          <p class="eyebrow">Student Learning Portal</p>
+          <h1>Student Login</h1>
+          <p>Use your Student ID and password to continue the MOLECULINK investigation.</p>
+        </div>
+        <article class="card login-card">
+          <label>Student ID <input id="student-id" autocomplete="username" placeholder="Enter Student ID"></label>
+          <label>Password <input id="student-pin" type="password" autocomplete="current-password" placeholder="Enter password"></label>
+          <button class="primary" id="student-login-button" type="button"><i data-lucide="log-in"></i> Open Student Portal</button>
+          <p id="student-login-status" class="help">Enter your assigned student credentials.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="route-teacher-login" class="route">
+      <div class="login-panel">
+        <div class="page-head">
+          <p class="eyebrow">Teacher Companion Portal</p>
+          <h1>Teacher Access</h1>
+          <p>Enter the teacher username and password provided for the MOLECULINK pilot.</p>
+        </div>
+        <article class="card login-card">
+          <label>Username <input id="teacher-username" autocomplete="username" placeholder="TEACHER"></label>
+          <label>Password <input id="teacher-password" type="password" autocomplete="current-password" placeholder="Enter teacher password"></label>
+          <button class="primary" id="teacher-login-button" type="button"><i data-lucide="log-in"></i> Enter Teacher Companion</button>
+          <p id="teacher-login-status" class="help">Enter the credentials assigned to authorized teachers.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="route-admin-login" class="route">
+      <div class="login-panel">
+        <div class="page-head">
+          <p class="eyebrow">Administrator Portal</p>
+          <h1>Administrator Access</h1>
+          <p>Enter the administrator username and password to manage pilot implementation records.</p>
+        </div>
+        <article class="card login-card">
+          <label>Username <input id="admin-username" autocomplete="username" placeholder="ADMIN"></label>
+          <label>Password <input id="admin-password" type="password" autocomplete="current-password" placeholder="Enter admin password"></label>
+          <button class="primary" id="admin-login-button" type="button"><i data-lucide="shield-check"></i> Enter Administrator Portal</button>
+          <p id="admin-login-status" class="help">Enter the credentials assigned to the authorized administrator.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="route-student" class="route">
+      <div class="page-head">
+        <p class="eyebrow">Student Learning Portal</p>
+        <h1>Continue the MOLECULINK Investigation</h1>
+        <p>Open the learner version to continue MOLECULINK missions, E-nquiry, tactile lab, formative games, Mission Clearance, badges, and certificate progress.</p>
+        <button id="student-logout-button" class="secondary logout-inline" type="button"><i data-lucide="log-out"></i> Sign Out</button>
+      </div>
+      <div class="grid two">
+        <article class="card">
+          <h2>Student Learning Path</h2>
+          <ul class="check-list">
+            <li>Welcome and orientation</li>
+            <li>Readiness Assessment and three scaffolded missions</li>
+            <li>Detective Toolkit: E-nquiry, Tactile Lab, Games, and Text Route</li>
+            <li>Mission Clearance Test, Mission Clearance, Detective Record, badges, and certificate</li>
+          </ul>
+          <button class="primary" id="open-student-app" type="button"><i data-lucide="book-open-check"></i> Continue Student Portal</button>
+          <p id="student-portal-status" class="help">This opens the main student MOLECULINK website.</p>
+        </article>
+        <article class="card">
+          <h2>Teacher Note</h2>
+          <p>This ecosystem shell links to the existing student app without redesigning it, so learner navigation and learning flow remain stable.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="route-teacher" class="route">
+      <div class="teacher-shell">
+        <div class="teacher-topline">
+          <div>
+            <p class="eyebrow">Teacher Companion Portal</p>
+            <h1>Teacher Companion Guide</h1>
+          </div>
+          <button id="teacher-logout-button" class="secondary logout-inline" type="button"><i data-lucide="log-out"></i> Sign Out</button>
+        </div>
+        <nav class="teacher-tabbar" aria-label="Teacher companion tabs">
+          <button class="active" data-teacher-tab="teacher-home"><i data-lucide="home"></i> Start Here</button>
+          <button data-teacher-tab="teacher-welcome"><i data-lucide="sparkles"></i> Teaching Approach</button>
+          <button data-teacher-tab="our-profile"><i data-lucide="atom"></i> Profile Folder</button>
+          <button data-teacher-tab="teacher-briefing"><i data-lucide="book-open-check"></i> Curriculum Map</button>
+          <button data-teacher-tab="assessment-center"><i data-lucide="clipboard-check"></i> Assessment Kit</button>
+          <button data-teacher-tab="pretest-guide"><i data-lucide="clipboard-list"></i> Readiness Assessment</button>
+          <button data-teacher-tab="mission-1-guide"><i data-lucide="flag"></i> Mission 1</button>
+          <button data-teacher-tab="mission-2-guide"><i data-lucide="flag"></i> Mission 2</button>
+          <button data-teacher-tab="mission-3-guide"><i data-lucide="flag"></i> Mission 3</button>
+          <button data-teacher-tab="teacher-toolkit"><i data-lucide="wrench"></i> Detective Toolkit</button>
+          <button data-teacher-tab="posttest-guide"><i data-lucide="file-check-2"></i> Mission Clearance Test</button>
+          <button data-teacher-tab="clearance-guide"><i data-lucide="ticket-check"></i> Mission Clearance</button>
+          <button data-teacher-tab="teacher-references"><i data-lucide="book-open"></i> References</button>
+          <button data-teacher-tab="teacher-downloads"><i data-lucide="download"></i> Printables</button>
+          <button id="teacher-logout-tab-button" type="button"><i data-lucide="log-out"></i> Log Out</button>
+        </nav>
+        <div class="tab-shell teacher-manual-shell">
+          <section id="teacher-home" class="teacher-tab active"></section>
+          <section id="teacher-welcome" class="teacher-tab"></section>
+          <section id="our-profile" class="teacher-tab"></section>
+          <section id="teacher-briefing" class="teacher-tab"></section>
+          <section id="assessment-center" class="teacher-tab"></section>
+          <section id="pretest-guide" class="teacher-tab"></section>
+          <section id="mission-1-guide" class="teacher-tab"></section>
+          <section id="mission-2-guide" class="teacher-tab"></section>
+          <section id="mission-3-guide" class="teacher-tab"></section>
+          <section id="teacher-toolkit" class="teacher-tab"></section>
+          <section id="posttest-guide" class="teacher-tab"></section>
+          <section id="clearance-guide" class="teacher-tab"></section>
+          <section id="teacher-references" class="teacher-tab"></section>
+          <section id="teacher-downloads" class="teacher-tab"></section>
+        </div>
+      </div>
+    </section>
+
+    <section id="route-admin" class="route">
+      <div class="portal-layout admin-layout">
+        <aside class="side-nav" aria-label="Administrator portal sections">
+          <p class="side-title">Administrator</p>
+          <button class="active" data-admin-tab="admin-home"><i data-lucide="layout-dashboard"></i> Home</button>
+          <button data-admin-tab="manage-schools"><i data-lucide="school"></i> Manage Schools</button>
+          <button data-admin-tab="manage-teachers"><i data-lucide="users"></i> Manage Teachers</button>
+          <button data-admin-tab="student-accounts"><i data-lucide="badge-plus"></i> Student Accounts</button>
+          <button data-admin-tab="manage-activities"><i data-lucide="list-checks"></i> Activities</button>
+          <button data-admin-tab="certificates-badges"><i data-lucide="award"></i> Certificates & Badges</button>
+          <button data-admin-tab="system-analytics"><i data-lucide="bar-chart-3"></i> Research Dashboard</button>
+          <button data-admin-tab="export-backup"><i data-lucide="database-backup"></i> Export & Backup</button>
+          <button id="admin-logout-button" class="logout-button" type="button"><i data-lucide="log-out"></i> Sign Out</button>
+        </aside>
+        <div class="tab-shell">
+          <section id="admin-home" class="admin-tab active"></section>
+          <section id="manage-schools" class="admin-tab"></section>
+          <section id="manage-teachers" class="admin-tab"></section>
+          <section id="student-accounts" class="admin-tab"></section>
+          <section id="manage-activities" class="admin-tab"></section>
+          <section id="certificates-badges" class="admin-tab"></section>
+          <section id="system-analytics" class="admin-tab"></section>
+          <section id="export-backup" class="admin-tab"></section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand-block">
+      <button class="footer-home" type="button" data-route="landing" aria-label="Return to MOLECULINK landing page">
+        <span class="molecule-logo logo-footer" aria-hidden="true">
+          <svg viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="12"></circle>
+            <circle cx="50" cy="25" r="7"></circle>
+            <circle cx="75" cy="60" r="7"></circle>
+            <circle cx="25" cy="60" r="7"></circle>
+          </svg>
+        </span>
+        <span>© 2026 MOLECULINK Learning Ecosystem</span>
+      </button>
+      <p>Where the Invisible Explains the Observable</p>
+    </div>
+    <div class="footer-note">
+      <strong>Data Privacy Note:</strong>
+      <span>MOLECULINK uses pilot access codes to reduce unnecessary personal data collection. Learner and implementation data are used only for progress monitoring, feedback, certification, classroom support, and authorized research reporting.</span>
+    </div>
+    <nav class="footer-links" aria-label="MOLECULINK contact">
+      <p>For inquiries contact: <a href="mailto:moleculink@gmail.com">moleculink@gmail.com</a></p>
+    </nav>
+  </footer>
+
+  <script src="pilot-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
